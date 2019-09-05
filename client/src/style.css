@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.workerOrders-container {
+  
+  display: flex;
+  
+  
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  text-align: center;
+  position: relative;
+} 
+
+h1 {
+  font-size: 22px;
+}
+
+.info-container {
+  display: flex;
+  
+}
+.info {
+  text-align: center;
+  width: 50px;
+  height: 100px;
+  margin-left: 20px;
+  
+}
+img {
+  width: 200px;
+  height: 190px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.time {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
+input[type=text] {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: 50px;
+  font-size: 100%;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.switch {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 34px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ca2222;
+  -webkit-transition: .4s;
+  transition: .4s;
+   border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2ab934;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(115px);
+}
+.slider:after
+{
+ content:'Earliest First';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 10px;
+ font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after
+{  
+  content:'Lastest First';
+}
